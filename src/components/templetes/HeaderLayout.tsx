@@ -1,4 +1,3 @@
-import { Props } from "framer-motion/types/types";
 import { children, memo, ReactNode, VFC } from "react";
 import { Header } from "../organisms/layout/Header";
 
