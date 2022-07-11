@@ -48,15 +48,16 @@ export const Header: VFC = memo(() => {
           size="sm"
           variant="unstyled"
           display={{ base: "block", md: "none" }}
+          onClick={onOpen}
         />
       </Flex>
-      <Drawer placement="left" size="xs" onClose={} isOpen={}>
+      <Drawer placement="left" size="xs" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay>
           <DrawerContent>
-            <DrawerBody>
-              <Button>Top</Button>
-              <Button>ユーザー一覧</Button>
-              <Button>設定</Button>
+            <DrawerBody p={0} bg="gray.100">
+              <Button w="100%">Top</Button>
+              <Button w="100%">ユーザー一覧</Button>
+              <Button w="100%">設定</Button>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
