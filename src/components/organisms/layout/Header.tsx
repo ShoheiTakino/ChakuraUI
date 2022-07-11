@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, IconButton } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { Link } from "react-router-dom";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 export const Header: VFC = memo(() => {
   return (
@@ -28,7 +29,13 @@ export const Header: VFC = memo(() => {
         </Box>
         <Link>設定</Link>
       </Flex>
-      <IconButton />
+      <IconButton
+        aria-label="メニューボタン"
+        icon={<HamburgerIcon />}
+        size="sm"
+        variant="unstyled"
+        display={{ base: "block", md: "none" }}
+      />
     </Flex>
   );
 });
