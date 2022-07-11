@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, IconButton } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,9 +12,11 @@ export const Header: VFC = memo(() => {
       justify="space-between"
       padding={{ base: 3, md: 5 }}
     >
-      <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
-        ユーザー管理アプリ
-      </Heading>
+      <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
+        <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
+          ユーザー管理アプリ
+        </Heading>
+      </Flex>
       <Flex
         align="center"
         fontSize="sm"
@@ -26,6 +28,7 @@ export const Header: VFC = memo(() => {
         </Box>
         <Link>設定</Link>
       </Flex>
+      <IconButton />
     </Flex>
   );
 });
