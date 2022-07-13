@@ -1,10 +1,15 @@
 import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
 import { memo, VFC } from "react";
+import { useHistory } from "react-router-dom";
 import { MenuIconButton } from "../../atoms/button/MenuIconButton";
 import { MenuDrawer } from "../../molecules/MenuDrawer";
 
 export const Header: VFC = memo(() => {
   const { isOpen, onClose, onOpen } = useDisclosure();
+  const history = useHistory();
+
+  const onClickHome = () => history.push("/home");
+
   return (
     <>
       <Flex
