@@ -1,6 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IconButton } from "@chakra-ui/react";
-import { Props } from "framer-motion/types/types";
 import { memo, VFC } from "react";
 
 type Props = {
